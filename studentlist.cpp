@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <string.h>
-#include<iomanip>
+#include<iomanip>// for the GPA part
 
 using namespace std;
 
@@ -44,13 +44,13 @@ int main(){
     cin.ignore();
     cout << "is there anything else you'd like to do (yes/no)" << endl;
     cin >> running;
-    if(strcmp(running, "yes") != 0){
+    if(strcmp(running, "yes") != 0){//restart
       doingstuff = false;
     }
   }
 }
 
-void addname(vector<Student*>*list){
+void addname(vector<Student*>*list){//for dereferenced list of pointers that contains the pointers of the students struct
   Student* i = new Student;
   cout << "What is your student's first name?" << endl;
   cin >> i->firstname;
